@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="example">
+			<template v-if="ok">
+			<h1>title</h1>
+			<p >paragraph1</p>
+			<p >paragraph2</p>
+			</template>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	var examplevm2=new Vue({
+		el:"#example",
+		data:{
+			ok:false
+		}
+	});
+</script>

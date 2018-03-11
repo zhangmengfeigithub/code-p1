@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body id="example">
+		<input type="text"  v-model="msg" debounce="5000"/><br />
+		{{msg}}
+		
+	</body>
+</html>
+<script type="text/javascript">
+	var example2=new Vue({
+		el:"#example",
+		data:{
+			msg:"内容是在5000ms时间后才改变的"
+		}
+	});
+</script>

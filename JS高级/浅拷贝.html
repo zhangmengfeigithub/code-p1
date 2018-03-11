@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function simpleClone1(obj){
+    if(typeof obj != 'object'){
+        return false;
+    }
+    var cloneObj = {};
+    for(var i in obj){
+        cloneObj[i] = obj[i];
+    }
+    return cloneObj;
+}
+
+var obj1={a:1,b:2,c:[1,2,3]};
+var obj2=simpleClone1(obj1);
+console.log(obj1.c); //[1,2,3]
+console.log(obj2.c); //[1,2,3]
+obj2.c.push(4);
+console.log(obj2.c); //[1,2,3,4]
+console.log(obj1.c); //[1,2,3,4]
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

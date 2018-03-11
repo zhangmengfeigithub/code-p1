@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+    background:#f8f8f8;
+    font:13px Trebuchet MS, Arial, Helvetica, Sans-Serif;
+    color:#333;
+    line-height:160%;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+#container {
+    margin:0 auto;
+    background:#fff;
+    width:600px;
+    padding:20px 40px;
+    text-align:left;
+}
+
+#myform {
+    margin:1em 0;
+    padding-top:1.5em;
+    color:#246878;
+    width:350px;
+    background:#fbfaf4 url(images/bg.gif) repeat-y;
+}
+
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+			<form id="myform">
+				<h3>反馈表</h3>
+				<fieldset>
+					<p>姓名:
+						<input class="special" type="text" name="name" />
+					</p>
+					<p>性别:
+						<input class="radio" type="radio" name="" value="" /> 男
+						<input class="radio" type="radio" name="" value="" /> 女 </p>
+					<p>邮箱:
+						<input class="special" type="text" name="email" />
+					</p>
+					<p>主页网址：
+						<input class="special" type="text" name="web" />
+					</p>
+					<p>意见反馈:
+						<textarea name="message" cols="30" rows="10"></textarea>
+					</p>
+					<p class="submit">
+						<button type="submit"></button>
+					</p>
+				</fieldset>
+			</form>
+		</div>
+
+	</body>
+
+</html>

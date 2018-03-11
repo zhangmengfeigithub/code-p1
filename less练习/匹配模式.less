@@ -1,0 +1,53 @@
+//.sanjiao{
+//  width: 0;
+//  height: 0;
+//  overflow: hidden;
+//  border-width:10px;
+//  border-color: red transparent transparent transparent;
+//  border-style: solid;
+//}
+.triangle(top,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color:transparent transparent @c transparent;
+    border-style: solid;
+}
+.triangle(bottom,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color:@c transparent transparent  transparent;
+    border-style: solid;
+}
+.triangle(left,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color:transparent @c transparent  transparent;
+    border-style: solid;
+}
+.triangle(right,@w:5px,@c:#ccc){
+    border-width:@w;
+    border-color:transparent transparent  transparent @c;
+    border-style: solid;
+}
+.sanjiao{
+    .triangle(top,100px);
+}
+//匹配模式：定位
+.pos(r){
+    position: relative;
+}
+.pos(a){
+    position: absolute;
+}.pos(f){
+    position: fixed;
+}
+.pipei{
+    width: 200px;
+    height: 200px;
+    background-color:red;
+    .pos(r);
+}
+@w:100px;
+@h:100px;
+.add{
+    width: @w+300;
+    height: @h+500;
+    background-color: red;
+}

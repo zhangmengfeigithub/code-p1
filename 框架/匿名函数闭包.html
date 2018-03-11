@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+//传递给window
+//	(function(){
+//		var name="sex";
+//		var sex="男";
+//		function get1(){
+//			return name+":"+sex;
+//		}
+//		function get2(){
+//			return name+":"+sex;
+//		}
+//		window.get2=get2;
+//	})();
+//	alert(get2());
+//对象的形式
+//	(function(){
+//		var name="张孟飞";
+//		var sex="男";
+//		function get1(){
+//			return name+":"+sex;
+//		}
+//		function get2(){
+//			return name+":"+sex;
+//		}
+//		var itcast={
+//			name:name,
+//			sex:sex,
+//			get1:get1,
+//			get2:get2,
+//			on:function(){
+//				console.log("事件框架");
+//			}
+//		};
+//		window.$$=itcast;
+//	})();
+//	$$.on();
+//传参
+	(function(w){
+		var name="张孟飞";
+		var sex="男";
+		function get1(){
+			return name+":"+sex;
+		}
+		function get2(){
+			return name+":"+sex;
+		}
+		var itcast={
+			name:name,
+			sex:sex,
+			get1:get1,
+			get2:get2,
+			on:function(){
+				console.log("事件框架");
+			}
+		};
+		w.$$=itcast;
+	})(window);
+	$$.on();
+	
+</script>

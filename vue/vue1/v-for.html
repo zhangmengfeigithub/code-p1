@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body id="example">
+		<ul id="demo">
+			<li v-for="item in json" class="item-{{$index}}"></li>
+			{{$item}} 
+		</ul>
+	</body>
+</html>
+<script type="text/javascript">
+	var demo=new Vue({
+		el:"#demo",
+		data:{
+						
+						arr:["apple","banana","orange"],
+						json:{a:"apple",b:"banana",c:"orange"}
+					}
+	});
+</script>

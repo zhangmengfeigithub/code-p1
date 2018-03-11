@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		var p=document.createElement('P');
+		var div=document.getElementsByTagName("div");
+		p.appendChild(document.createTextNode("this is a para"));
+		div.parentNode.replaceChild(p,div);
+	</script>
+	<body>
+		<div>
+			<p>this is a text</p>
+			<ul>
+				<li>item1</li>
+				<li>item2</li>
+				<li>item3</li>
+			</ul>
+		</div>
+	</body>
+</html>

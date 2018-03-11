@@ -1,0 +1,29 @@
+@charset"utf-8";
+body{
+    background-color: red;
+}
+@test_width:100px;
+@test_color:yellow;
+.div{
+    width: 500px;
+    height: 500px;
+}
+.div1{
+  width: @test_width;
+  height: @test_width;  
+  background-color:@test_color;
+  margin-right:50px;
+  .div
+}
+.div2(@border_width:50px){
+    border:solid blue @border_width;
+}
+.test_hunhe{
+   .div2(80px); 
+}
+.radius(@border_radius:40px){
+    border-radius:@border_radius ;
+}
+.ra{
+    .radius(80px);
+}

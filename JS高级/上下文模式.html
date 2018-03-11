@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				border: 2px dashed pink;
+				margin: 10px;
+			}
+			p{
+				width: 100px;
+				height: 100px;
+				display: block;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var divs=document.getElementsByTagName("div");
+				var ps=document.getElementsByTagName("p");
+				var arr=[];
+				arr.push.apply(arr,divs);
+				arr.push.apply(arr,ps);
+				for(var k=0;k<arr.length;k++){
+					var ele=arr[k];
+					ele.style.backgroundColor="yellow";
+				}
+//				for(var i=0;i<divs.length;i++){
+//					var div=div[i];
+//					div.style.backgroundColor=#ccc;
+//				}
+//				for(var j=0;j<divs.length;j++){
+//					var p=div[j];
+//					p.style.backgroundColor=#ccc;
+//				}
+			}
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<p></p>
+		<p></p>
+		<p></p>
+	</body>
+</html>

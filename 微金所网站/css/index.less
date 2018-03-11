@@ -1,0 +1,39 @@
+/* 顶部通栏的样式 */
+
+.header {
+  // 后代节点
+  .row {
+    // 子代选择器
+    &>div {
+      height: 40px;
+      border: 1px solid gray;
+      text-align: center;
+      line-height: 40px;
+      // 子代选择器
+      &>a {
+        color: gray;
+        text-decoration: none;
+        font-size: 13px;
+      }
+    }
+    &>div:nth-child(n+3){
+        a{
+            margin-left: 10px;
+        }
+    }
+    &>div:first-child {
+        position: relative;
+        img{
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+       &:hover{
+        img{
+            display:block;
+           }
+  }
+}
+}
+}

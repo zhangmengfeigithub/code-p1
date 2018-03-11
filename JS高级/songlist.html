@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	var songlist=[
+	{
+		songname:"情书",
+		singer:"张学友"
+	},
+	{
+		songname:"演员",
+		singer:"薛小谦"
+	},
+	{
+		songname:"李白",
+		singer:"李荣浩"
+	}
+	];
+	//增删改查
+	//增加
+	songlist.push({
+		songname:"今天你要嫁给我",
+		singer:"陶喆"
+	});
+	console.log(songlist);
+	//删除
+	for(var i=0;i<songlist.length;i++)
+	{
+		var song=songlist[i];
+		if(song.songname=="李白")
+		{
+			songlist.splice(i,1);
+		}
+		//splice
+	}
+	//改变
+	for(var j=0;j<songlist.length;j++)
+	{
+		var song=songlist[j];
+		if(song.songname=="演员")
+		{
+			song.singer="薛之谦";
+		}
+		//splice
+	}
+	查
+		for(var k=0;k<songlist.length;k++)
+	{
+		var song=songlist[k];
+		if(song.songname=="情书")
+		{
+			console.log(song);
+		}
+		//splice
+	}
+//</script>

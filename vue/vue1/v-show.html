@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<input type="text" v-model="message" placeholder="edit me" />
+		<div id="example">
+		<p v-show="greeting">hello!</p>
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript">
+	var examplevm2=new Vue({
+		el:"#example",
+		data:{
+			greeting:false
+		}
+	});
+</script>

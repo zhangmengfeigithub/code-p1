@@ -1,0 +1,20 @@
+.red{
+    background-color: red;
+    color: red;
+    border: 1px solid red;
+}
+body{
+    .red();
+}
+.oneColor(@color:#0094ff){
+    background-color: @color;
+    border: 1px solid @color;
+    color: @color;
+}
+ul{
+    .oneColor(yellow);
+    
+}
+div{
+    .oneColor(blue);
+}

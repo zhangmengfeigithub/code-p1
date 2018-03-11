@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点我消失哦</button>
+		<button id="btn1">点我出现哦</button><br />
+		<img id="img" src="img/16.jpg"/>
+	</body>
+</html>
+<script type="text/javascript">
+	var $=function $id(id){
+		return document.getElementById(id);
+	};
+	$("btn").onclick=function(){
+		$("img").hide();
+	};
+	$("btn1").onclick=function(){
+		$("img").show();
+	};
+	HTMLElement.prototype.hide=function(){
+		this.style.display="none";
+	}
+	HTMLElement.prototype.show=function(){
+		this.style.display="block";
+	}
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	function Person(){};
+	Person.prototype={
+		constrctor:Person,
+		name:"nicho",
+		age:29,
+		job:"soft engineer",
+		friends:["shelby","court"],
+		sayname:function(){
+			alert(this.name)
+		}
+	}
+	var person1=new Person();
+	var person2=new Person();
+	person1.friends.push("van");
+	alert(person1.friends);
+	alert(person2.friends);
+	
+</script>

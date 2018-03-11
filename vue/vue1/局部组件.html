@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body id="example">
+		<my-component>
+			
+		</my-component>
+	</body>
+</html>
+<script type="text/javascript">
+	 var Child={
+	 	template:'<h1>自定义组件</h1>'
+	 }
+	  new Vue({
+	 	el:"#example",
+	 	components:{
+	 		'my-component':Child
+	 	}
+	 });
+</script>

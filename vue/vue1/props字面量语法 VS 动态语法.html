@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<h3>#字面量语法 VS 动态语法</h3>
+        <div id="dr04">
+    <!-- 这里传递是字符串 -->
+    <child04 my-message04="123+456"></child04>
+    <!-- 这里用了动态语法，传递的值会通过js的表达式计算，传递的是数字 -->
+    <child04 :my-message04="123+456"></child04>
+</div>
+	</body>
+</html>
+<script type="text/javascript">
+	//********************************************************************
+//字面量语法 VS 动态语法
+Vue.component("child04", {
+    props: ["myMessage04"],
+    template: "<div>myMessage04: {{myMessage04}}</div>",
+});
+var dr04 = new Vue({
+    el: "#dr04",
+});
+</script>

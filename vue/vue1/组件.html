@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body id="example">
+		<my-component>
+			
+		</my-component>
+	</body>
+</html>
+<script type="text/javascript">
+	 Vue.component('my-component',{
+	 	template:'<div>A custom component!</div>'
+	 });
+	  new Vue({
+	 	el:"#example"
+	 });
+</script>

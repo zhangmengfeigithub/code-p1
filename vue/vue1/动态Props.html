@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+	<h3>#动态Props</h3>
+<div id="dr03">
+    <div>
+        <input v-model="parentMsg" placeholder="please input parentMsg" />
+    </div>
+    <br />
+    <!-- 用v-bind绑定数据parentMsg到组件中 -->
+    <child03 v-bind:my-message03="parentMsg"></child03>
+    <!-- 缩写v-bind-->
+    <child03 :my-message03="parentMsg"></child03>
+</div>
+	</body>
+</html>
+<script type="text/javascript">
+//********************************************************************
+//动态Props
+//注册组件myMessage03
+Vue.component("child03", {
+    props: ['myMessage03'],
+    template: "<div>myMessage03: {{myMessage03}}</div>"
+});
+var dr03 = new Vue({
+    el: "#dr03",
+    data: {
+        parentMsg: "Hello, this is parentMsg!",
+    }
+});
+</script>

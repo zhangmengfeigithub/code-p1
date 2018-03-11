@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function parasite(original){
+    var clone = Object.create(original);//通过调用函数创建一个新对象
+    clone.sayHi = function(){ //以某种方式来增强这个对象
+        console.log("hi");
+    };
+    return clone;//返回这个对象
+}
+var superObj = {
+    colors: ['red','blue','green']
+};
+var subObj1 = parasite(superObj);
+subObj1.colors.push('black');
+var subObj2 = parasite(superObj);
+subObj2.colors.push('white');
+
+console.log(superObj.colors);//["red", "blue", "green", "black", "white"]
+console.log(subObj1.colors);//["red", "blue", "green", "black", "white"]
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

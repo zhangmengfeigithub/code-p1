@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	window.onload=function(){
+		function creatsong(songname,singer){
+			var obj=new Object();
+			obj.name=songname;
+			obj.singer=singer;
+			obj.sing=function () {
+				console.log("听我唱首歌");
+			}
+			return obj;
+			
+		}
+		var obj1=creatsong("演员","薛之谦");
+		var obj2=creatsong("一言难尽","张宇");
+	}
+</script>

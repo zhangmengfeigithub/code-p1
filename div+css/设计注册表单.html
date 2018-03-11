@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		body,
+		div,
+		h1,
+		form,
+		fieldset,
+		input,
+		textarea {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: none;
+		}
+		
+		html {
+			height: 100%;
+		}
+		
+		body {
+			background-color: #728eaa;
+			font-family: 宋体;
+			margin-bottom: 20px;
+			padding-bottom: 40px;
+		}
+		
+		#container {
+			width: 430px;
+			margin: 30px auto;
+			padding: 60px 30px;
+			background-color: #c9d0de;
+			border: 1px solid #e1e1e1;
+		}
+		
+		h1 {
+			font-size: 35px;
+			text-align: center;
+			color: #445668;
+			margin: 0 0 35px 0;
+			text-shadow: 0 2px 0px #f2f2f2;
+		}
+		
+		label {
+			float: left;
+			clear: left;
+			margin: 11px 20px 0 0;
+			width: 95px;
+			text-align: center;
+			font-size: 18px;
+			font-family: simsun;
+			color: #445668;
+			text-shadow: 0px 1px 0px #F2F2F2;
+		}
+		
+		input {
+			width: 210px;
+			height: 35px;
+			padding: 5px 20px 0px 20px;
+			margin: 0 0 20px 0;
+			background-color: #5e768d;
+			border-radius: 5px;
+			font-family: simsun;
+			font-size: 16px;
+			color: #a1b2c3;
+			text-shadow: 0 -1px 0px #38506b;
+		}
+		
+		textarea {
+			width: 210px;
+			height: 170px;
+			padding: 12px 20px 0px 20px;
+			margin: 0 0 20px 0;
+			background: #5E768D;
+			font-family: 宋体, sans-serif;
+			font-size: 16px;
+			color: #f2f2f2;
+			text-shadow: 0px -1px 0px #334f71;
+		}
+		
+		textarea {
+			color: #a1b2c3;
+			text-shadow: 0px -1px 0px #38506b;
+		}
+		
+		textarea {
+			width: 210px;
+			height: 170px;
+			padding: 12px 20px 0px 20px;
+			margin: 0 0 20px 0;
+			background: #5E768D;
+			font-family: 宋体, sans-serif;
+			font-size: 16px;
+			color: #f2f2f2;
+			text-shadow: 0px -1px 0px #334f71;
+		}
+		
+		textarea {
+			color: #a1b2c3;
+			text-shadow: 0px -1px 0px #38506b;
+		}
+		
+		input:focus,
+		textarea:focus {
+			background: #728eaa;
+		}
+		
+		p {
+			margin-left: 140px;
+		}
+		
+		input[type=submit],input[type=reset] {
+			width: 105px;
+			height: 42px;
+			border: 1px solid #556f8c;
+			cursor: pointer;
+			color: #ffffff;
+		}
+	</style>
+
+	<body>
+		<div id="container">
+			<h1>用户注册</h1>
+			<form>
+				<fieldset>
+					<label for="name">用户名:</label>
+					<input type="text" id="name" placeholder="Enter your full name" />
+					<label for="email">Email:</label>
+					<input type="email" id="email" placeholder="Enter your email address" />
+					<label for="password">密码:</label>
+					<input type="password" id="password" placeholder="Enter your password" />
+					<label for="password">重复密码:</label>
+					<input type="password" id="password" placeholder="Enter your password again" />
+					<p>
+						<input type="reset" value="重新填写" />
+						<input type="submit" value="注 册" />
+					</p>
+				</fieldset>
+			</form>
+		</div>
+
+	</body>
+
+</html>

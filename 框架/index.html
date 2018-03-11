@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="js/我的框架.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<style>
+			#div{
+				width: 100px;
+				height: 100px;
+                background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<div id="div">
+			
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+    //测试
+    $$.click('btn', function(){
+        document.getElementsByTagName('div')[0].style.background = 'green'
+    });
+
+    $$.hover('div', function(){
+        this.style.background = 'blue'
+    },function(){
+        this.style.background = 'green'
+    });
+
+
+</script>

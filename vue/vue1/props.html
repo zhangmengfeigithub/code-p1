@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<h3>#使用props传递数据</h3>
+<!--<div id="dr01">
+    <div>组件实例的作用域是孤立的。这意味着不能并且不应该在子组件的模板内直接引用父组件的数据。可以使用 props 把数据传给子组件。</div>
+    <br />
+    <child msg="hello, vue.js!"></child>
+</div>-->
+<h3>#camelCase vs. kebab-case</h3>
+<div id="dr02">
+    <div>HTML 特性不区分大小写。名字形式为 camelCase 的 prop 用作特性时，需要转为 kebab-case（短横线隔开）</div>
+    <br />
+　　 <!-- kebab-case in html -->
+    <child02 my-message02="Hello, this is kebab-case message!"></child02>
+</div>
+	</body>
+</html>
+<script type="text/javascript">
+//********************************************************************
+//使用props传递数据
+//注册组件"child"
+//Vue.component("child", {
+//  //声明props属性
+//  props: ['msg'],
+//  //props可以用在模板内
+//  //可以用"this.msg"设置
+//  template: '<div>msg: {{msg}}</div>'
+//});
+//var dr01 = new Vue({
+//  el: "#dr01",
+//});
+//********************************************************************
+//camelCase vs. kebab-case
+//注册组件child02
+Vue.component("child02", {
+    //在js中用驼峰命名法
+    props: ["myMessage02"],
+    template: "<div>myMessage02: {{myMessage02}}</div>"
+});
+var dr02 = new Vue({
+    el: "#dr02",
+});
+</script>

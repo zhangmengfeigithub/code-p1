@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function foo(){
+				var name="周杰伦";
+				var age=34;
+				var song="晴天";
+				return {
+					getname:function(){
+						return name;
+					},
+					getage:function(){
+						return age;
+					},
+					getsong:function(newsong){
+						song=newsong;
+						return song;
+					}
+				}
+				
+			}
+			var obj=foo();
+			console.log(obj.getname());
+			console.log(obj.getage());
+			console.log(obj.getsong('不能说的秘密'));
+//			
+//           var name="laowang";
+//           console.log(name);
+//			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="example">
+		<ul>
+			<li v-for="val in arr|orderBy">{{val}}</li>
+		</ul>
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript">
+	var examplevm2=new Vue({
+		el:"#example",
+		data:{
+			arr:["width","value","limir","order"]
+		}
+	});
+</script>

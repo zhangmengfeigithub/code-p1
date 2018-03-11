@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="example">
+		<ul>
+			<li v-for="val in arr|limitBy 2 2">{{val}}</li>
+		</ul>
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript">
+	var examplevm2=new Vue({
+		el:"#example",
+		data:{
+			arr:[1,2,3,4,5,6]
+		}
+	});
+</script>

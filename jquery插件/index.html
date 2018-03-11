@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body {
+    font-size: 36px;
+    line-height: 1.6;
+}
+
+p {
+    margin: 10px 0;
+}
+
+label {
+    display: inline-block;
+    min-width: 140px;
+}
+
+label.error {
+    margin-left: 10px;
+    color: red;
+}
+
+input, button {
+    font-size: 36px;
+    line-height: 35px;
+    border: 1px solid #999;
+    min-width: 180px;
+}
+
+input.error {
+    border: 1px solid red;
+}
+
+input[type=submit], button {
+    margin-top: 20px;
+    font-size: 36px;
+    padding: 10px 0;
+}
+		</style>
+		<script src="vendor/jquery-1.10.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="vendor/jquery.validate-1.13.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#demoForm").validate({
+					rules: {
+                    username: {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 10
+                },
+                password: {
+                    required: true,
+                    minlength: 2,
+                    maxlength: 16
+                }
+               },
+                messages:{
+                    username: {
+                    required: "输入不能为空",
+                    minlength: "用户名最小为2位",
+                    maxlength: "用户名最大为10位"
+                },
+                password: {
+                    required: "输入不能为空",
+                    minlength: "密码最小为2位",
+                    maxlength: "密码最大为16位"
+                }
+				}
+			});
+			});
+		</script>
+	</head>
+	<body>
+		<form id="demoForm">
+    <fieldset>
+        <legend>用户登录</legend>
+        <p id="info"></p>
+
+        <p>
+            <label for="username">用户名</label>
+            <input type="text" id="username" name="username"/>
+        </p>
+
+        <p>
+            <label for="password">密码</label>
+            <input type="password" id="password" name="password"/>
+        </p>
+        <p>
+            <input type="submit" value="登录"/>
+        </p>
+    </fieldset>
+</form>
+	</body>
+</html>

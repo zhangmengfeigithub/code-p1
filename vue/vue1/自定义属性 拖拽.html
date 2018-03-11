@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="box">
+		<div v-drag :style="{width:'200px',height: '200px',background: 'blue',position: 'absolute',right:0,top:0}"></div>
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript">
+     Vue.directive('drag',function(){
+            var oDiv=this.el;
+            oDiv.onmousedown=function(ev){
+                var disX=ev.clientX-oDiv.offsetLeft;
+                var disY=ev.clientY-oDiv.offsetTop;
+
+                document.onmousemove=function(ev){
+                    var l=ev.clientX-disX;
+                    var t=ev.clientY-disY;
+                    oDiv.style.left=l+'px';
+                    oDiv.style.top=t+'px';
+                };
+                document.onmouseup=function(){
+                    document.onmousemove=null;
+                    document.onmouseup=null;
+                };
+            };
+        });
+
+        window.onload=function(){
+            var vm=new Vue({
+                el:'#box',
+                data:{
+                    msg:'welcome'
+                }
+            });
+        };
+
+
+</script>

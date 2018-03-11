@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var obj={};
+		var obj1={
+			name:"张学友",
+			sayhello:function(){
+				console.log("你好，我是张学友");
+			}
+		}
+		for(var k in obj1)
+		{
+			obj[k]=obj1[k];
+		}
+		obj.sayhello();
+	</script>
+</html>

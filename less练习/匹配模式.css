@@ -1,0 +1,16 @@
+.sanjiao {
+  border-width: 100px;
+  border-color: transparent transparent #cccccc transparent;
+  border-style: solid;
+}
+.pipei {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  position: relative;
+}
+.add {
+  width: 400px;
+  height: 600px;
+  background-color: red;
+}

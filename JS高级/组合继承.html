@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function supertype(name){
+				this.name=name;
+				this.color=["red","blue","green"];
+			}
+			supertype.prototype.sayname=function(){
+				alert(this.name);
+			};
+			function subtype(name,age){
+				supertype.call(this,name);
+				this.age=age;
+			}
+			subtype.prototype=new supertype();
+			subtype.prototype.constructor=subtype;
+			subtype.prototype.sayage=function(){
+				alert(this.age);
+			};
+			var instance1=new subtype("nicho",20);
+			instance1.color.push("black");
+			alert(instance1.color);
+			instance1.sayname();
+			instance1.sayage();			
+			var instance2=new subtype("greg",24);
+			alert(instance2.color);
+			instance2.sayname();
+			instance2.sayage();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

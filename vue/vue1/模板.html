@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.red{
+				color:red;
+			}
+			.blue{
+				background-color: blue;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				new Vue({
+					el:"#box",
+					data:{
+					msg:"abc"
+					},
+					methods:{
+						show:function(){
+							
+								alert("回车键");
+							
+						}
+					}
+				});
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box" >
+			<input type="text"  v-model="msg" /><br />
+			{{{msg}}}<br />
+			{{*msg}}
+		</div>
+	</body>
+</html>

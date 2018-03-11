@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			@font-face {
+						  font-family: 'iconfont';
+						  src: url('tu/iconfont.eot');
+						  src: url('tu/iconfont.eot?#iefix') format('embedded-opentype'),
+						  url('tu/iconfont.woff') format('woff'),
+						  url('tu/iconfont.ttf') format('truetype'),
+						  url('tu/iconfont.svg#iconfont') format('svg');
+}
+				p{
+					width: 100px;
+					height: 30px;
+					border: 1px solid #000;
+					margin: 100px auto;
+					padding-left: 20px;
+					text-align: center;
+					line-height: 30px;
+					position: relative;
+				}
+				p::before{
+					content: "\3432";
+					position: absolute;
+					left: 10px;
+					top: 0;
+					font-family: iconfont;
+					color: green;
+				}
+		</style>
+	</head>
+	<body>
+		<p>微信</p>
+	</body>
+</html>

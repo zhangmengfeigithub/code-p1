@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var c=new Vue({
+					el:'#box',
+					data:{
+						msg:'welcome vue',
+						msg2:12,
+						msg3:true,
+						arr:["apple","banana"'peal'],
+					},
+					methods:{
+						show:function(){
+							alert(!);
+					}
+					}
+				});
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box">
+		<input type="button"value="按钮" v-on:click="show()" />
+		</div>
+		
+	</body>
+</html>

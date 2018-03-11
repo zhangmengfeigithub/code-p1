@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+//	var songlist=[
+//	{
+//		songname:"情书",
+//		singer:"张学友"
+//	},
+//	{
+//		songname:"演员",
+//		singer:"薛小谦"
+//	},
+//	{
+//		songname:"李白",
+//		singer:"李荣浩"
+//	}
+//	];
+
+		function Songmanager() {
+			this.songlist=null;
+			
+		}
+		Songmanager.prototype = {
+			init:function(songlist){
+				this.songlist=songlist;
+			},
+				addsong: function(song) {
+					this.songlist.push(song);
+				},
+				removesong: function(songname) {
+					var song = this.selectsong(songname);
+					if(song==null){
+						throw"删除的歌曲不存在";
+					}
+					var index = this.songlist.indexOf(song);
+					this.songlist.splice(index, 1);
+				},
+				updatesong: function(songname, singer) {
+					var song = this.selectsong(songname);
+					if(song==null){
+						throw"你要修改的歌曲不存在";
+					}
+					song.singer = singer;
+					//		for(var j = 0; j < songlist.length; j++) {
+					//			var song = songlist[j];
+					//			if(song.songname == "演员") {
+					//				song.singer = "薛之谦";
+					//			}
+					},
+					selectsong: function(songname) {
+						for(var k = 0; k < this.songlist.length; k++) {
+							var song = this.songlist[k];
+							if(song.songname == songname) {
+								return song;
+							} //splice
+						}
+						return null;
+					}
+				};
+			
+				var pwbDEmanager=new Songmanager();
+				pwbDEmanager.init([
+					{
+						songname:"青藏高原",
+						singer:"潘文斌"
+					}
+				])
+				pwbDEmanager.addsong({
+					songName:"东风破",
+                    singer:"Jay Chou"
+				})
+				var gjbDEmanager=new Songmanager();
+				gjbDEmanager.removesong("李白");
+				console.log(pwbDEmanager.songlist);
+				console.log(gjbDEmanager.songlist);
+</script>

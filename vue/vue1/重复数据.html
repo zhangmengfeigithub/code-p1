@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			var vm=new Vue({
+				data:{
+					arr:["banan","apple","li"]
+				},
+				methods:{
+					add:function(){
+						this.arr.push("tomato");
+					}
+				}
+			}).$mount("#box");
+		};
+	</script>
+	<body>
+		<div id="box">
+			<button id="add" @click="add()">添加</button>
+		<ul>
+			<li id="box" v-for="value in arr" track-by="$index">{{value}}</li>
+		</ul>
+		</div>
+	</body>
+</html>

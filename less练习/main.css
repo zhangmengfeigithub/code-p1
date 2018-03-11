@@ -1,0 +1,22 @@
+@charset "utf-8";
+body {
+  background-color: red;
+}
+.div {
+  width: 500px;
+  height: 500px;
+}
+.div1 {
+  width: 100px;
+  height: 100px;
+  background-color: #ffff00;
+  margin-right: 50px;
+  width: 500px;
+  height: 500px;
+}
+.test_hunhe {
+  border: solid #0000ff 80px;
+}
+.ra {
+  border-radius: 80px;
+}

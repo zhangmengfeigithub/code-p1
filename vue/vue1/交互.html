@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/vue-resource.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				new Vue({
+					el:"body",
+					data:{},
+					methods:{
+						get:function(){
+							this.$http.get("a.txt").then(function(res){
+								alert(res.data);
+							},function(res){
+								alert(res.data);
+							});
+						},
+					}
+				});
+			};
+		</script>
+	</head>
+	<body>
+		<input value="按钮" type="button" @click="get()" />
+	</body>
+</html>

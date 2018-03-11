@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="bower_components/vue/dist/vue.js"></script>
+	<style>
+	</style>
+	<script type="text/javascript" id="bond">
+		<h2 @click="changed">wode{{msg}}</h2>
+		<ul>
+		<li>111</li>
+		</ul>
+	</script>
+</head>
+<body>
+	<div id="box">
+		<my-aaa></my-aaa>
+	</div>
+
+	<script>
+//		var Aaa=Vue.extend({
+//			data(){
+//				return {
+//					msg:"我是标题"
+//				};
+//			},
+//			methods:{
+//				change(){
+//					this.msg="changed"
+//			}
+//			},
+//			template:"<h3 @click='change'>{{msg}}</h3>"
+//		});
+		/*var vm=new Vue({
+			el:'#box',
+			data:{
+				bSign:true
+			},
+			components:{
+				aaa:Aaa
+			}
+		});*/
+//		//第二种方式
+//		Vue.component("my-aaa",{
+//			template:"<h2>张孟飞<h2>"
+//		});
+//		var vm=new Vue({
+//			el:'#box',
+//			
+//		});
+//var Aaa=Vue.extend({
+//			data(){
+//				return {
+//					msg:"我是标题"
+//				};
+//			},
+//			methods:{
+//				change(){
+//					this.msg="changed"
+//			}
+//			},
+//			template:"<h3 @click='change'>{{msg}}</h3>"
+//		});
+		var vm=new Vue({
+			el:'#box',
+			components:{
+				"my-aaa":{
+					data(){
+						return{
+							msg:"welcome vue"
+						}
+					},
+					methods:{
+						change(){
+							this.msg="changed";
+						}
+					},
+					template:"#bond"
+				}
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1 {width:100px; height: 100px; background: red; position: absolute; left: 0px; top: 30px;}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBtn = document.getElementById('btn');
+				var oDiv = document.getElementById('div1');
+				var iTimer = null;
+				function startmove() {
+				clearInterval(iTimer);
+				iTimer = setInterval(function() {
+					if(oDiv.offsetLeft == 500) {
+						clearInterval(iTimer);
+					} else {
+						oDiv.style.left = oDiv.offsetLeft + 10 + 'px';
+					}
+				}, 30);
+			}
+				startmove();
+			}
+			
+		</script>
+	</head>
+<body>
+	<input type="button" value="动起来" id="btn" />
+    <div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			       function supertype(){
+       	this.color=["red",'blue','green'];
+       }
+       function subtype(){}
+       subtype.prototype=new supertype();
+       var instance1=new subtype();
+       instance1.color.push('black');
+       alert(instance1.color);
+         var instance2=new subtype();
+       alert(instance2.color);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

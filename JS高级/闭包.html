@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			function foo(){
+//				var num=123;
+//				return function (a){
+//					num=a;
+//					console.log(num);
+//				}
+//			}
+//			var func=foo();
+//			func(3459);
+
+           function foo(){
+           	var name="张国荣";
+           	var age=18;
+           	return {
+           		getname:function(){
+           			return name;
+           		},
+           		getage:function(){
+           			return age;
+           		}
+           	}
+           }
+           var obj=foo();
+           console.log(obj.getname());
+           console.log(obj.getage());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

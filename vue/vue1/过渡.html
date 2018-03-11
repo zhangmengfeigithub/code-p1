@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="bower_components/vue/dist/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#div1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+			.fade-transition{
+				transition: 1s all ease; 
+			}
+			.fade-enter{
+				opacity: 0;
+			}
+			.fade-leave{
+				opacity: 0;
+				transform: translateX(200px);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<button @click="toggle">按钮</button>
+			<div id="div1" v-show="bsign" transition="fade"></div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		new Vue({
+			el:"#box",
+			data:{
+				bsign:true
+			},
+			methods:{
+				toggle(){
+					this.bsign=!this.bsign
+				}
+			}
+			
+		});
+		
+	</script>
+</html>

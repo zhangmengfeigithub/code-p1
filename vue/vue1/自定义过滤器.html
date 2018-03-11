@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="example">
+		{{a|date}}
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript">
+    Vue.filter("date",function(input){
+    	var odate=new Date(input);
+    	return odate.getFullYear()+"-"+(odate.getMonth()+1)+"-"+odate.getDate()+" "
+    	+odate.getHours()+":"+odate.getMinutes()+":"+odate.getSeconds();
+    });
+	new Vue({
+		el:"#example",
+		data:{
+			a:Date.now()
+		}
+	});
+</script>

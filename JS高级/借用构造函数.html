@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function supertype(name){
+				this.name=name;
+				this.color=["red","green","blue"];
+			}
+			function subtype(){
+				supertype.call(this,"zhangmengfei");
+			}
+			var instance1=new subtype();
+			instance1.color.push("black");
+			alert (instance1.name);
+			alert(instance1.color);
+			var instance2=new subtype();
+			alert(instance2.color);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

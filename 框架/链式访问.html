@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	function Animate(){};
+	Animate.prototype={
+		add:function(){
+			alert("123");
+			return this;
+		},
+		run:function(){
+			alert("运行部");
+			return this;
+		},
+		houqin:function(){
+			alert("后勤部");
+			return this;
+		}
+	};
+	var animate=new Animate();
+	animate.add().run().houqin();
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="lib/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+				new Vue({
+					el:"#box",
+					data:{},
+					methods:{
+						show:function(){
+							
+								alert("回车键");
+							
+						}
+					}
+				});
+			};
+		</script>
+	</head>
+	<body>
+		<div id="box" >
+			<input  type="text" @keydown.enter="show()"></input>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Person(name,status){
+				this.name=name;
+				this.status=status;
+				this.act=function(){
+					console.log("演戏");
+					this.exercise=function(){
+						console.log("就不强身健体，就要保卫祖国");
+					}
+					
+			}
+			var p=new Person("刘德华",'离婚');
+			Person.prototype.exercise=function(){
+				console.log("强身健体，保卫祖国");
+			}
+			p.exercise();
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

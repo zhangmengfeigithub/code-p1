@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		  .div{
+		  	width: 100px;
+		  	height: 100px;
+		  	background-color: red;
+		  }
+		  
+		</style>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		window.onload=function(){
+			var c=new Vue({
+				el:".box",
+				data:{
+					a:true
+				}
+			});
+		};
+		</script>
+	</head>
+	<body>
+	    <div class="box">
+	    	<button v-on:click="a=false">按钮</button>
+            <div class="div" v-show="a"></div>	    	
+	    </div>
+	</body>
+</html>

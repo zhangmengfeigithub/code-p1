@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="mylinks">
+			<li id="gosomewhere">go somewhere</li>
+			<li id="dosomething">do something</li>
+			<li id="sayhi">say hi</li>
+		</ul>
+	</body>
+</html>
+<script type="text/javascript">
+	var item1=document.getElementById("gosomewhere");
+	var item2=document.getElementById("dosomething");
+	var item3=document.getElementById("sayhi");
+	EventUtil.addHandler(item1,"click",function(event){
+		location.href="http://www.wtox.com"
+	});
+	EventUtil.addHandler(item2,"click",function(event){
+		document.title="i change the document title";
+	});
+	EventUtil.addHandler(item3,"click",function(event){
+		alert("hi");
+	});
+	
+</script>

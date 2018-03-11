@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script type="text/javascript">
+	var student1={
+		getnum:function(){
+			return 120;
+		}
+	}
+	var student2={
+		age:function(){
+			return "pingguo";
+		}
+	}
+	var des=student1.getnum.call(student2);
+	console.log(des);
+</script>
